@@ -1,9 +1,22 @@
-function randomjoke(){
-    let random = array["Mujha Kyun Nikala","Billo Rani", "Uffff....","123 four pilla","Ma Nahi Batao ga"]
+function randomjokeGenerator() {
 
-    let joke = document.getElementById("jokes");
-    let btns = document.getElementById("btn");
+    let pakistani_Memes = [
+        "Mujha Kyun Nikala",
+        "Lahore da lawa Akhter Pawa",
+        "Ma nahi batao ga",
+        "Ufffff......",
+        "1 2 3 4 Pilla",
+        "Billo rani",
+        "Program to wargaya",
+        "Ma mangna nahi aya magar majbori ha",
+        "Ma na kabhi haram ka niwala nahi khaya",
+        "Saye to Saye Saye ka kutta bhi Saye"
+      ];
 
-    random = joke.innerText;
-    console.log(random) 
+    let faizi = Math.random() * pakistani_Memes.length;
+    let roundjoke = Math.floor(faizi);
+    let jokeGen = pakistani_Memes[roundjoke];
+
+    let joke = document.querySelector("#jokes");
+    joke.innerText = `" ${jokeGen} "`;
 }
